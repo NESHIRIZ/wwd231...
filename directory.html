@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TAFADZWA SIBANDA CHAMBER OF COMMERCE promotes business, networking, and digital growth." />
+  <meta name="author" content="Your Name" />
+  <title>TAFADZWA SIBANDA CHAMBER OF COMMERCE</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="stylesheet" href="styles/featured.css" />
+  <link rel="stylesheet" href="styles/courses.css" />
+</head>
+<body>
+  <header class="animate-fadeIn" role="banner">
+    <div class="logo-container">
+      <img src="images/tafadzwa-logo.svg" alt="Tafadzwa Sibanda Chamber Logo" class="animate-pulse" width="96" height="96" />
+      <h1 class="chamber-title">TAFADZWA SIBANDA CHAMBER OF COMMERCE</h1>
+    </div>
+
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+      <button class="hamburger" aria-label="Toggle Navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="cta-button">Join Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero animate-slideIn" aria-labelledby="hero-heading" role="region">
+      <img class="hero-visual" src="images/hero-cyber.svg" alt="Abstract cyber-technology skyline" aria-hidden="true" />
+      <div class="hero-content">
+        <h2 id="hero-heading">Empowering Digital & Business Growth</h2>
+        <p>Connecting innovators, SMEs and investors — grow digitally and globally with TAFADZWA SIBANDA CHAMBER.</p>
+        <a href="join.html" class="cta-button animate-pulse">Become a Member</a>
+      </div>
+    </section>
+
+    <section class="features animate-fadeIn" aria-labelledby="features-heading">
+      <h2 id="features-heading" class="sr-only">Our Services</h2>
+      <div class="feature-grid">
+        <div class="feature-card network" tabindex="0" role="group" aria-labelledby="net-title">
+          <!-- handshake svg (animation target .hand) -->
+          <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <g class="hand" fill="none" stroke="#1E6FB8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 34c6-8 14-10 20-6" />
+              <path d="M54 30c-4 6-10 8-18 6" />
+              <path d="M27 28c2 3 5 4 8 2" />
+              <path d="M22 36c3-1 6-1 9 1" />
+            </g>
+          </svg>
+          <h3 id="net-title">Networking</h3>
+          <p>Curated mixers, introductions and sector roundtables to expand your network.</p>
+        </div>
+
+        <div class="feature-card growth" tabindex="0" role="group" aria-labelledby="growth-title">
+          <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#1E6FB8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <path class="arrow" d="M12 44 L28 28 L44 36 L52 20" />
+              <path d="M52 20 L52 32" />
+              <path d="M52 20 L40 20" />
+            </g>
+          </svg>
+          <h3 id="growth-title">Growth</h3>
+          <p>Market insights, capital access and acceleration programs for members.</p>
+        </div>
+
+        <div class="feature-card community" tabindex="0" role="group" aria-labelledby="comm-title">
+          <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <g class="people" fill="#4DA6FF">
+              <circle cx="22" cy="22" r="6"/>
+              <circle cx="42" cy="22" r="6"/>
+              <path d="M10 44c4-6 12-8 18-8s14 2 18 8" fill="#1E6FB8"/>
+            </g>
+          </svg>
+          <h3 id="comm-title">Community</h3>
+          <p>Mentorship, local partnerships and collaborative initiatives for sustainable growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="spotlight animate-slideIn" aria-labelledby="spotlight-heading">
+      <h2 id="spotlight-heading">Featured Members</h2>
+      <div class="member-carousel" aria-live="polite" style="display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:1rem;">
+        <div class="member-card">
+          <img src="images/tech1.svg" alt="Sibanda Tech Labs — AI & Cloud" width="100%" height="140"/>
+          <h3>Sibanda Tech Labs</h3>
+          <p>AI, cloud and scale-up services powering East African innovation.</p>
+        </div>
+
+        <div class="member-card">
+          <img src="images/tech2.svg" alt="Sibanda Analytics — Data & Insights" width="100%" height="140"/>
+          <h3>Sibanda Analytics</h3>
+          <p>Data-driven market intelligence and decision tools for SMEs.</p>
+        </div>
+
+        <div class="member-card">
+          <img src="images/tech3.svg" alt="Sibanda Consulting — Strategy" width="100%" height="140"/>
+          <h3>Sibanda Consulting</h3>
+          <p>Business strategy and digital transformation advisory for growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="events-section animate-fadeIn" aria-labelledby="events-heading">
+      <h2 id="events-heading">Upcoming Events</h2>
+      <div class="events-timeline" role="list">
+        <article class="event-card" role="listitem" aria-labelledby="e1">
+          <div class="event-date">Nov 15</div>
+          <h3 id="e1">Business Networking Mixer</h3>
+          <p>Sector tables and investor introductions.</p>
+          <a class="event-link" href="#">Learn More</a>
+        </article>
+
+        <article class="event-card" role="listitem" aria-labelledby="e2">
+          <div class="event-date">Dec 03</div>
+          <h3 id="e2">Export Opportunities Workshop</h3>
+          <p>SME market entry & logistics guidance.</p>
+          <a class="event-link" href="#">Register</a>
+        </article>
+
+        <article class="event-card" role="listitem" aria-labelledby="e3">
+          <div class="event-date">Jan 20</div>
+          <h3 id="e3">Annual Chamber Summit</h3>
+          <p>Keynotes, panels and member matchmaking.</p>
+          <a class="event-link" href="#">View Agenda</a>
+        </article>
+
+        <article class="event-card" role="listitem" aria-labelledby="e4">
+          <div class="event-date">Feb 10</div>
+          <h3 id="e4">SME Digitalisation Clinic</h3>
+          <p>Practical clinics to build digital capabilities.</p>
+          <a class="event-link" href="#">Sign Up</a>
+        </article>
+
+        <article class="event-card" role="listitem" aria-labelledby="e5">
+          <div class="event-date">Mar 05</div>
+          <h3 id="e5">Investor Pitch Day</h3>
+          <p>Member pitches to regional and international investors.</p>
+          <a class="event-link" href="#">Apply</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="animate-fadeIn" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="images/tafadzwa-logo.svg" alt="Tafadzwa Sibanda Chamber Logo" width="120" height="120" />
+        <p>Promoting Business & Digital Excellence</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons" style="display:flex; gap:10px; align-items:center;">
+          <!-- inline SVG icons preserved -->
+          <a href="#" target="_blank" aria-label="LinkedIn" style="display:inline-block; width:28px; height:28px;">
+            <svg viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.4 8.98h4.16V24H.4V8.98zM8.98 8.98h3.99v2.04h.06c.56-1.06 1.93-2.18 3.98-2.18 4.26 0 5.05 2.8 5.05 6.44V24h-4.16v-7.02c0-1.67-.03-3.82-2.33-3.82-2.33 0-2.68 1.82-2.68 3.7V24H8.98V8.98z"/></svg>
+          </a>
+          <a href="#" target="_blank" aria-label="Twitter" style="display:inline-block; width:28px; height:28px;">
+            <svg viewBox="0 0 24 24" fill="#1DA1F2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.38c-.84.5-1.77.86-2.76 1.06A4.28 4.28 0 0 0 11.07 9.5c0 .34.04.67.11.99A12.14 12.14 0 0 1 3.15 5.15a4.28 4.28 0 0 0 1.32 5.71c-.66-.02-1.29-.2-1.84-.5v.05a4.28 4.28 0 0 0 3.43 4.2c-.5.14-1.02.16-1.56.06a4.28 4.28 0 0 0 4 2.97 8.58 8.58 0 0 1-5.3 1.83A8.8 8.8 0 0 1 2 19.54 12.09 12.09 0 0 0 8.29 21c7.54 0 11.67-6.25 11.67-11.66 0-.18 0-.36-.01-.54A8.3 8.3 0 0 0 22.46 6z"/></svg>
+          </a>
+          <a href="#" target="_blank" aria-label="Facebook" style="display:inline-block; width:28px; height:28px;">
+            <svg viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.2v-2.9h2.2V9.4c0-2.2 1.3-3.4 3.3-3.4.95 0 1.94.17 1.94.17v2.1h-1.08c-1.07 0-1.4.66-1.4 1.33v1.6h2.4l-.38 2.9h-2.02v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> TAFADZWA SIBANDA CHAMBER OF COMMERCE | All Rights Reserved</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <!-- Custom Scripts -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</body>
+</html>
