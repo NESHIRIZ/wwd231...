@@ -1,0 +1,14 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Tafadzwa Sibanda Chamber of Commerce logo</title>
+  <defs>
+    <linearGradient id="lg" x1="0" x2="1">
+      <stop offset="0" stop-color="#BFE9FF"/>
+      <stop offset="1" stop-color="#4DA6FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="28" fill="url(#lg)"/>
+  <g transform="translate(20,28)" fill="#ffffff" font-family="Playfair Display, serif" text-anchor="middle">
+    <text x="80" y="70" font-size="48" font-weight="700">TSCC</text>
+    <text x="80" y="108" font-size="12" font-weight="600">Tafadzwa Sibanda</text>
+  </g>
+</svg>
