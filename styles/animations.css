@@ -1,0 +1,149 @@
+/* ANIMATION.CSS – Entrance, Micro-Interactions & Hero Effects */
+
+/* ------------------ HERO VISUAL FLOAT ------------------ */
+.hero-visual {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.14;
+  pointer-events: none;
+  transform-origin: center;
+  animation: heroFloat 12s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.01); }
+}
+
+/* ------------------ FEATURE CARD ENTRANCE ------------------ */
+.feature-card {
+  transition: transform 0.45s cubic-bezier(.2,.9,.2,1), box-shadow 0.35s ease, opacity 0.5s ease;
+  will-change: transform, opacity;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: featureEntrance 0.65s forwards;
+}
+
+@keyframes featureEntrance {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Staggered entrance */
+.feature-grid .feature-card:nth-child(1) { animation-delay: 0.12s; }
+.feature-grid .feature-card:nth-child(2) { animation-delay: 0.22s; }
+.feature-grid .feature-card:nth-child(3) { animation-delay: 0.32s; }
+
+/* ------------------ FEATURE MICRO-ANIMATIONS ------------------ */
+
+/* Network (pulse bar + tilt) */
+.feature-card.network:hover,
+.feature-card.network:focus-within {
+  transform: translateY(-8px) rotate(-1deg) scale(1.016);
+  box-shadow: 0 18px 36px rgba(50, 205, 50, 0.12);
+}
+
+.feature-card.network::after {
+  content: '';
+  display: block;
+  height: 6px;
+  width: 40px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, rgba(50, 205, 50, 0.9), rgba(26, 140, 26, 0.9));
+  border-radius: 6px;
+  transform-origin: left;
+  animation: pulseBar 1.8s ease-in-out infinite;
+  opacity: 0.85;
+}
+
+@keyframes pulseBar {
+  0%, 100% { transform: scaleX(1); opacity: 0.85; }
+  50% { transform: scaleX(0.88); opacity: 0.6; }
+}
+
+/* Growth (chart bounce) */
+.feature-card.growth:hover .fa-chart-line,
+.feature-card.growth:focus-within .fa-chart-line {
+  animation: chartBounce 0.9s ease both;
+}
+
+@keyframes chartBounce {
+  0% { transform: translateY(0) scale(1); }
+  40% { transform: translateY(-8px) scale(1.04); }
+  70% { transform: translateY(0) scale(0.98); }
+  100% { transform: none; }
+}
+
+/* Community (subtle orbit) */
+.feature-card.community:hover,
+.feature-card.community:focus-within {
+  transform: translateY(-6px) rotate(0.6deg) scale(1.012);
+  box-shadow: 0 16px 34px rgba(17, 24, 39, 0.08);
+}
+
+.feature-card.community .fa-users {
+  display: inline-block;
+  transition: transform 0.65s cubic-bezier(.2, .9, .2, 1);
+}
+
+.feature-card.community:hover .fa-users {
+  transform: rotateY(18deg) translateY(-4px);
+}
+
+/* ------------------ EVENT CARDS ------------------ */
+.event-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.06);
+}
+
+/* ------------------ UTILITY ANIMATIONS ------------------ */
+.animate-fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.7s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.animate-slideIn {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideIn 0.7s cubic-bezier(.2, .9, .2, 1) forwards;
+}
+
+@keyframes slideIn {
+  to { opacity: 1; transform: none; }
+}
+
+.animate-pulse {
+  animation: pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+/* ------------------ LINKS & BUTTONS ------------------ */
+a,
+.cta-button {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+a:hover,
+.cta-button:hover {
+  transform: translateY(-3px);
+}
+
+/* ------------------ FOCUS STATES ------------------ */
+:focus {
+  outline: 3px solid rgba(77, 166, 255, 0.22);
+  outline-offset: 2px;
+}

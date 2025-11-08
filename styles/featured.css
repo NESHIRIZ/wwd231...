@@ -1,0 +1,170 @@
+/* FEATURED.CSS – Animations, Cards, and Visual Enhancements */
+
+/* Global Feature Card Styles */
+.feature-card {
+  background: var(--card-white);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  text-align: center;
+}
+
+.feature-card svg {
+  width: 72px;
+  height: 72px;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.feature-card h3 {
+  margin-top: 6px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
+.feature-card p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+}
+
+/* ------------------ Animations ------------------ */
+
+/* Handshake animation (network) */
+@keyframes shakeHands {
+  0%, 50%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-4px) rotate(-3deg); }
+  75% { transform: translateY(-3px) rotate(3deg); }
+}
+
+.network svg .hand {
+  transform-origin: 50% 50%;
+  transition: transform 0.3s ease;
+}
+
+.network:hover svg .hand,
+.network:focus-within svg .hand {
+  animation: shakeHands 0.9s ease-in-out;
+}
+
+/* Arrow animation (growth) */
+@keyframes arrowUp {
+  0% { transform: translateY(18px) scale(0.9); opacity: 0; }
+  40% { transform: translateY(-6px) scale(1.02); opacity: 1; }
+  70%, 100% { transform: translateY(0) scale(1); }
+}
+
+.growth svg .arrow {
+  transform-origin: 50% 100%;
+}
+
+.growth:hover svg .arrow,
+.growth:focus-within svg .arrow {
+  animation: arrowUp 0.9s cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+
+/* Community animation */
+@keyframes peopleOrbit {
+  0%, 100% { transform: translateY(0) rotateY(0deg); }
+  50% { transform: translateY(-6px) rotateY(18deg); }
+}
+
+.community svg .people {
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.community:hover svg .people,
+.community:focus-within svg .people {
+  animation: peopleOrbit 1s ease both;
+}
+
+/* ------------------ Event Cards ------------------ */
+
+.events-timeline {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.event-card {
+  min-width: 260px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
+  transition: transform 0.32s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.32s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 60px rgba(17, 24, 39, 0.12);
+}
+
+.event-date {
+  font-weight: 700;
+  color: var(--accent-dark);
+  background: rgba(77, 166, 255, 0.08);
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* ------------------ Member Cards ------------------ */
+
+.member-card {
+  background: linear-gradient(180deg, var(--card-white), #f7fcff);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.member-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.member-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 48px rgba(17, 24, 39, 0.10);
+}
+
+/* ------------------ Footer ------------------ */
+
+footer {
+  background: var(--primary-grey);
+  color: var(--text-dark);
+}
+
+.footer-logo img {
+  filter: none;
+}
+
+/* ------------------ Courses Section ------------------ */
+
+.courses-section {
+  background: linear-gradient(180deg, rgba(77, 166, 255, 0.06), rgba(255, 255, 255, 0));
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 20px 60px rgba(77, 166, 255, 0.06);
+}
+
+/* ------------------ Responsive Tweaks ------------------ */
+
+@media (min-width: 900px) {
+  .events-timeline {
+    overflow: visible;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
